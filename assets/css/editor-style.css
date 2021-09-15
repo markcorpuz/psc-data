@@ -2373,7 +2373,7 @@ h6.has-background {
   padding: 1em;
 }
 
-/* SETUP-BE | 1.0.0 | 210317 | setup-child/block/setup-child-100/list.scss
+/* SETUP-CHILD | 1.0.0 | 210605 | setup-child/block/setup-child-100/list.scss
 ---------------------------------------------------------------------------------------------------- */
 .entry-content ul, .entry-content ol {
   padding-left: 1.5rem;
@@ -2392,6 +2392,13 @@ h6.has-background {
 }
 .entry-content ul.wp-block-gallery li, .entry-content ol.wp-block-gallery li {
   padding-bottom: 0;
+}
+
+.editor-styles-wrapper ul ul,
+.editor-styles-wrapper ul ol,
+.editor-styles-wrapper ol ul,
+.editor-styles-wrapper ol ol {
+  margin-left: 1rem;
 }
 
 /*  SETUP-CHILD | 1.0.0 | 210224 | setup-child/selector/setup-child-100/textsize.scss
@@ -3673,7 +3680,7 @@ ol.list-wdescription > li ol {
   border-left: 1px solid #f0f0f0;
 }
 
-/* SETUP-BE | 1.0.0 | 210224 | setup-child/selector/setup-child-100/shadow.scss
+/* SETUP-BE | 1.0.0 | 210911 | setup-child/selector/setup-child-100/shadow.scss
 ---------------------------------------------------------------------------------------------------- */
 .shadow-inner,
 .shadow-inner-bottom {
@@ -3785,6 +3792,12 @@ a.shadow:link {
   -webkit-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.75);
   box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.75);
+}
+
+.shadow-floater {
+  -webkit-box-shadow: 0px 0px 60px 0px rgba(85, 85, 85, 0.12);
+  -moz-box-shadow: 0px 0px 60px 0px rgba(85, 85, 85, 0.12);
+  box-shadow: 0px 0px 60px 0px rgba(85, 85, 85, 0.12);
 }
 
 /*  SETUP-CHILD | 1.0.0 | 210224 | setup-child/selector/setup-child-100/hide.scss
