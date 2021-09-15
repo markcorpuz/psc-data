@@ -91,9 +91,11 @@ function ea_child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/inc/custom-logo.php' );
 	include_once( get_stylesheet_directory() . '/inc/navigation.php' );
 	include_once( get_stylesheet_directory() . '/inc/loop.php' );
+	include_once( get_stylesheet_directory() . '/inc/loop-custom.php' );
 	include_once( get_stylesheet_directory() . '/inc/author-box.php' );
 	include_once( get_stylesheet_directory() . '/inc/template-tags.php' );
 	include_once( get_stylesheet_directory() . '/inc/items.php' );
+	include_once( get_stylesheet_directory() . '/inc/items-link.php' );
 	include_once( get_stylesheet_directory() . '/inc/site-footer.php' );
 
 	// Editor
@@ -268,3 +270,17 @@ function ea_template_hierarchy( $template ) {
 	return $template;
 }
 add_filter( 'template_include', 'ea_template_hierarchy' );
+
+
+/**
+ * Disable Genesis SEO
+ */
+
+// Remove Genesis SEO settings from post/page editor
+remove_action( 'admin_menu', 'genesis_add_inpost_seo_box' );
+
+// Remove Genesis SEO settings option page
+remove_theme_support( 'genesis-seo-settings-menu' );
+
+// Remove Genesis SEO settings from taxonomy editor
+remove_action( 'admin_init', 'genesis_add_taxonomy_seo_options' );
